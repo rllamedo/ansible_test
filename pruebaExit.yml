@@ -1,7 +1,7 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-   - name: Ejecutar script
-     shell: testscript.sh >> somelog.txt
-     args:
-       chdir: test/
+    - name: Ejecutar script
+      shell: testscript.sh >> somelog.txt
+      args:
+        chdir: test/
