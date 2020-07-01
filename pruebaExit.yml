@@ -1,0 +1,4 @@
+- name: Ejecutar script
+  shell: testscript.sh >> somelog.txt
+  args:
+    chdir: test/
