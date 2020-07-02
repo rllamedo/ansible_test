@@ -1,7 +1,7 @@
 - name: Ejecutar Tarea
   hosts: all
   tasks:
-    - name: Ejecutar script
+    - name: Ejecutar script test
       shell: testscript.sh >> somelog.txt
       args:
         chdir: /home/altabox/test/
