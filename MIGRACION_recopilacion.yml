@@ -1,6 +1,6 @@
-- name: MIGRACION | Preparar
+- name: MIGRACION - Preparar
   hosts: all
   tasks:
     - name: Ejecutar
-      shell: ls *
+      shell: ls * > ls.txt
       
