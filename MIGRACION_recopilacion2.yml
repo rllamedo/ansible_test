@@ -1,4 +1,4 @@
-- name: MIGRACION - Preparar
+- name: MIGRACION - Recopilar datos con facts
   hosts: all
   tasks:
     - name: "Re-run setup to use custom facts"
