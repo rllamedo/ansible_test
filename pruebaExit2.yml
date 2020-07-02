@@ -2,6 +2,6 @@
   hosts: all
   tasks:
     - name: Ejecutar script de test2
-      shell: testscript2.sh >> somelog2.txt
+      shell: testscript2.sh
       args:
         chdir: /home/altabox/test/
