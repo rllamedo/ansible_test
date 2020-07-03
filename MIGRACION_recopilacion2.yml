@@ -14,17 +14,9 @@
         msg: "RESULTADO: {{ recopilaDatos.stdout }}"
     - debug:      
         msg: "split con ; {{  recopilaDatos.stdout.split(';') }}"
+          
     - debug:
-        msg: "split con : {{  recopilaDatos.stdout.split(':') }}"
-        
-    - name: Par Clave Valor
-      set_fact: 
-        keyvalue: "{{ item }}"
+        msg: "Pares Clave-Valor: {{ item }}"
       with_items:
-      - "{{ recopilaDatos.stdout.split(';') }}"
-    
-    - debug:
-        msg: "Par Clave-Valor: {{ item }}"
-      with_items:
-        - "{{ keyvalue }}"
+        - "{{ recopilaDatos.stdout.split(';') }}"
  
