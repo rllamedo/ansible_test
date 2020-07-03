@@ -10,5 +10,6 @@
     - name: Ejecutar sh
       script: /home/altabox/pruebas/recopilar.sh
       register: recopilaDatos
-    - debug:
+    - name: Muestra debug
+      debug:
       var: "{{ recopilaDatos }}"
