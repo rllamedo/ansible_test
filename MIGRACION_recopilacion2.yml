@@ -1,14 +1,16 @@
 - name: MIGRACION - Recopilar datos con facts
   hosts: all
   tasks:
-    - name: "Re-run setup to use custom facts"
-      setup: ~
     - name: "Create custom fact directory"
       file:
-        path: "/home/migracion/facts"
-        state: "directory"
+        path: /etc/ansible/facts.d
+        state: directory
+        recurse: yes
     - name: "Insert custom fact file"
       copy:
         src: files/custom.fact
-        dest: /home/migracion/facts/custom.fact
+        dest: /etc/ansible/facts.d
         mode: 0755
+    - name: "Re-run setup to use custom facts"
+      setup: filter=ansible_local
+    
