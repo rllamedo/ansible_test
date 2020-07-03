@@ -19,8 +19,8 @@
         
     - name: Array
       set_fact: 
-        "{{ item[0] }}={{ item[1] }}"
-      with_nested:
+        resultados= {{ item }}
+      with_items:
       - "{{ recopilaDatos.stdout.split(';') }}"
-      - "{{ recopilaDatos.stdout.split(':') }}"
-    
+    - debug:
+        msg: "FACT con ITEMS: {{  recopilaDatos.stdout.split(':') }}"
