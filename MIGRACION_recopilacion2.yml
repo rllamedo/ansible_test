@@ -12,7 +12,9 @@
       register: recopilaDatos
     - debug:
         msg: "RESULTADO: {{ recopilaDatos.stdout }}"
+    - debug:      
         msg: "split con ; {{  recopilaDatos.stdout.split(';') }}"
+    - debug:
         msg: "split con : {{  recopilaDatos.stdout.split(':') }}"
         
     - name: Array
