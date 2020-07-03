@@ -8,7 +8,7 @@
         path: "{{ ansible_user_dir }}/facts.d"
         state: directory
     - name: Ejecutar sh
-      bash: ". /home/altabox/pruebas/recopilar.sh"
+      bash: sh /home/altabox/pruebas/recopilar.sh
       register: recopilaDatos
     - debug:
         msg: "{{ recopilaDatos }}"
