@@ -11,5 +11,5 @@
       copy:
         src: "{{ item }}"
         dest: /etc/ansible/facts.d/custom.fact
-      with_fileglob: "/etc/ansible/facts/{{ copy }}*.fact"
+      with_fileglob: "/etc/ansible/facts/*.fact"
         
