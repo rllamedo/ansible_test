@@ -30,4 +30,14 @@
         result1: "{{ recopilaDatos.stdout.split(';') }}"
     - debug:
         msg: "FACT con ITEMS: {{ result1 }}"
+
+    - name: Array3
+      set_fact: 
+        resultados3: "{{ item }}"
+      with_items:
+      - "{{ result1 }}"
+    - debug:
+        msg: "FACT con ITEMS: {{ resultados3 }}"
+        
+        
         
