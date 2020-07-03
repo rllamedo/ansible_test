@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: "Re-run setup to use custom facts"
-      setup: filter=ansible_local
+      setup: ~
     - name: "Create custom fact directory"
       file:
         path: "{{ ansible_user_dir }}"/facts.d
@@ -12,7 +12,4 @@
       copy:
         src: files/custom.fact
         dest: "{{ ansible_user_dir }}"/facts.d
-        mode: 0755
-    - name: "Re-run setup to use custom facts"
-      setup: ~
-    
+        mode: 0755  
