@@ -7,7 +7,3 @@
       file:
         path: "{{ ansible_user_dir }}/facts.d"
         state: directory
-    - name: "Insert custom fact file"
-      copy:
-        src: /etc/ansible/facts/custom.fact
-        dest: "{{ ansible_user_dir }}/facts.d"
