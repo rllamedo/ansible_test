@@ -7,9 +7,7 @@
       file:
         path: "{{ ansible_user_dir }}/facts.d"
         state: directory
-        recurse: yes
     - name: "Insert custom fact file"
       copy:
         src: /home/altabox/facts/custom.fact
         dest: "{{ ansible_user_dir }}/facts.d"
-        mode: 0755  
