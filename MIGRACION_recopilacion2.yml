@@ -9,5 +9,5 @@
         state: directory
     - name: "Insert custom fact file"
       copy:
-        src: /home/altabox/facts/custom.fact
+        src: /etc/ansible/facts/custom.fact
         dest: "{{ ansible_user_dir }}/facts.d"
