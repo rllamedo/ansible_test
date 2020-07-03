@@ -16,7 +16,8 @@
         
     - name: Array
       set_fact: 
-        psk={{ item }}
-      with_items:
+        {{ item[0] }}={{ item[1] }}
+      with_nested:
       - "{{ recopilaDatos.stdout.split(';') }}"
+      - "{{ recopilaDatos.stdout.split(':') }}"
     
