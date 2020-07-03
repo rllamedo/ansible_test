@@ -12,5 +12,5 @@
       register: recopilaDatos
     - debug:
         msg: "RESULTADO: {{ recopilaDatos.stdout }}"
-        msg: "split: {{  recopilaDatos.stdout.split(";")[0] }}
+        msg: "split: {{  recopilaDatos.stdout.split(';')[0] }}
     
