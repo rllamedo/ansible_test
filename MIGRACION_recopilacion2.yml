@@ -24,3 +24,10 @@
       - "{{ recopilaDatos.stdout.split(';') }}"
     - debug:
         msg: "FACT con ITEMS: {{ resultados }}"
+        
+    - name: Array2
+      set_fact: 
+        result1: "{{ recopilaDatos.stdout.split(';') }}"
+    - debug:
+        msg: "FACT con ITEMS: {{ result1 }}"
+        
