@@ -22,6 +22,9 @@
         keyvalue: "{{ item }}"
       with_items:
       - "{{ recopilaDatos.stdout.split(';') }}"
+    
     - debug:
-        msg: "Par Clave-Valor: {{ keyvalue }}"
+        msg: "Par Clave-Valor: {{ item }}"
+      with_items:
+        - "{{ keyvalue }}"
  
