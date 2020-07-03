@@ -1,8 +1,6 @@
 - name: MIGRACION - Recopilar datos con facts
   hosts: all
   tasks:
-    - name: "Re-run setup to use custom facts"
-      setup: ~
     - name: "Create custom fact directory"
       file:
         path: "{{ ansible_user_dir }}/facts.d"
@@ -12,4 +10,7 @@
         src: "{{ item }}"
         dest: "{{ ansible_user_dir }}/facts.d/"
       with_fileglob: "/etc/ansible/facts/*.fact"
+    - name: "Re-run setup to use custom facts"
+      setup: ~
+        fact_path: "{{ ansible_user_dir }}/facts.d"
         
