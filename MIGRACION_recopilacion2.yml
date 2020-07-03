@@ -11,4 +11,4 @@
       shell: /home/altabox/pruebas/recopilar.sh
       register: recopilaDatos
     - debug:
-        msg: "{{ recopilaDatos.stdout }}"
+        msg: "RESULTADO: {{ recopilaDatos.stdout }}"
