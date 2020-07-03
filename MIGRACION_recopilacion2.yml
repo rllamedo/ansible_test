@@ -11,5 +11,5 @@
     - name: "Insert custom fact file"
       copy:
         src: files/custom.fact
-        dest: "{{ ansible_user_dir }}"/facts.d
+        dest: "{{ ansible_user_dir }}/facts.d"
         mode: 0755  
