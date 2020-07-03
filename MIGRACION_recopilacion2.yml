@@ -26,10 +26,12 @@
         - "{{ recopilaDatos.stdout.split(';') }}"
       register: foo_result
 
-    - name: make a list
-      set_fact: foo="{{ foo_result.results | map(attribute='ansible_facts.foo_item') | list }}"
+
 
     - debug: var=foo
+    
+    
+    
 
 
 
