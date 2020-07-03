@@ -17,27 +17,11 @@
     - debug:
         msg: "split con : {{  recopilaDatos.stdout.split(':') }}"
         
-    - name: Array
+    - name: Par Clave Valor
       set_fact: 
-        resultados: "{{ item }}"
+        keyvalue: "{{ item }}"
       with_items:
       - "{{ recopilaDatos.stdout.split(';') }}"
     - debug:
-        msg: "FACT con ITEMS: {{ resultados }}"
-        
-    - name: Array2
-      set_fact: 
-        result1: "{{ recopilaDatos.stdout.split(';') }}"
-    - debug:
-        msg: "FACT con ITEMS: {{ result1 }}"
-
-    - name: Array3
-      set_fact: 
-        resultados3: "{{ item }}"
-      with_items:
-      - "{{ result1 }}"
-    - debug:
-        msg: "FACT con ITEMS: {{ resultados3 }}"
-        
-        
-        
+        msg: "Par Clave-Valor: {{ keyvalue }}"
+ 
