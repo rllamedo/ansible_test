@@ -19,7 +19,7 @@
         
     - name: Array
       set_fact: 
-        resultados: {{ item }}
+        resultados: "{{ item }}"
       with_items:
       - "{{ recopilaDatos.stdout.split(';') }}"
     - debug:
