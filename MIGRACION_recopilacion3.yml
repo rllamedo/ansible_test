@@ -10,8 +10,4 @@
         src: "{{ item }}"
         dest: "{{ ansible_user_dir }}/facts.d/"
         mode: 0755
-      with_fileglob: "/etc/ansible/facts/*.fact"
-    - name: "Re-run setup to use custom facts"
-      setup:
-        fact_path: "{{ ansible_user_dir }}/facts.d"
-        
+      with_fileglob: "/etc/ansible/facts/*.fact"        
