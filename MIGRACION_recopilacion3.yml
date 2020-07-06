@@ -14,4 +14,4 @@
     - name: "Re-run setup to use custom facts"
       setup: ~
         fact_path: "{{ ansible_user_dir }}/facts.d"
-        
+        filter: ansible_local
