@@ -1,5 +1,5 @@
-- hosts: {{ ip
+- hosts: {{ ansible_tun0.ipv4.address }}
   tasks:    
    - name: Copy Remote-To-Remote (from serverA to serverB)
-     synchronize: src=/copy/from_serverA dest=/copy/to_serverB
-     delegate_to: serverA
+     synchronize: src=/test dest=/home/altabox
+     delegate_to: repositorio
