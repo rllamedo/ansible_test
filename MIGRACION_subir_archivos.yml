@@ -6,4 +6,5 @@
         mode: push
         src: "/tmp/prueba"
         dest: "/tmp"
+        rsync_path: "sudo rsync"
       delegate_to: 10.44.36.65
