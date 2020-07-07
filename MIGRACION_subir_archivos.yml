@@ -2,5 +2,5 @@
   hosts: all
   tasks:    
     - name: Copy Remote-To-Remote (from serverA to serverB)
-      synchronize: src=/tmp/test dest=/home/altabox/test
+      synchronize: src=/tmp/test2 dest=/home/altabox/
       delegate_to: 10.44.36.65
