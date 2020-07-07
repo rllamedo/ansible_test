@@ -3,4 +3,4 @@
   tasks:    
     - name: Copy Remote-To-Remote (from serverA to serverB)
       synchronize: src=/test dest=/home/altabox
-      delegate_to: repositorio
+      delegate_to: 10.44.36.65
