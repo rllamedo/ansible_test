@@ -3,7 +3,7 @@
   tasks:    
     - name: Copy Remote-To-Remote (from serverA to serverB)
       synchronize:
-        mode: pull
+        mode: push
         src: "/tmp/prueba"
         dest: "/tmp"
       delegate_to: 10.44.36.65
