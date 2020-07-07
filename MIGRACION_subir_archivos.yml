@@ -3,7 +3,7 @@
   tasks:    
     - name: Copy Remote-To-Remote (from serverA to serverB)
       synchronize:
-        mode: pull
+        mode: push
         src: /home/altabox/test3
         dest: /home/altabox
       delegate_to: 10.44.36.65
