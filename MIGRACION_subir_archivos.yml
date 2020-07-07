@@ -4,6 +4,6 @@
     - name: Copy Remote-To-Remote (from serverA to serverB)
       synchronize:
         mode: push
-        src: rsync://home/altabox/test3
+        src: rsync://tmp/test3
         dest: /home/altabox
       delegate_to: 10.44.36.65
