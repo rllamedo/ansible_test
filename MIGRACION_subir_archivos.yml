@@ -6,4 +6,4 @@
         mode: push
         src: "/tmp/prueba"
         dest: "/tmp"
-      delegate_to: repo
+      delegate_to: "10.44.36.65"
