@@ -1,0 +1,5 @@
+- hosts: {{ ip
+  tasks:    
+   - name: Copy Remote-To-Remote (from serverA to serverB)
+     synchronize: src=/copy/from_serverA dest=/copy/to_serverB
+     delegate_to: serverA
