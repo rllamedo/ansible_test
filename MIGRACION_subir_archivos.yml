@@ -1,4 +1,4 @@
-- name: MIGRACION - Subir archivos
+- name: MIGRACION - Subir archivos x
   hosts: all
   tasks:    
     - name: Copy Remote-To-Remote (from serverA to serverB)
